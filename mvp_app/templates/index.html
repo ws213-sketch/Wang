@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <title>学习卡片生成器（MVP）</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>学习卡片生成器（MVP）</h1>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+      <label>上传图片（课堂笔记 / 作业 / 照片）</label>
+      <input type="file" name="image" accept="image/*" required>
+      <button type="submit">上传并识别</button>
+    </form>
+    <hr>
+    <p>说明：若配置 `OPENAI_API_KEY`，会调用 OpenAI 获取更准确的分析；否则使用内置回退算法，依然可以运行。</p>
+  </div>
+</body>
+</html>

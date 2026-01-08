@@ -1,0 +1,6 @@
+﻿
+CommandType     Name                                               Version    Source                                                      
+-----------     ----                                               -------    ------                                                      
+Application     python.exe                                         0.0.0.0    C:\Users\wsj\AppData\Local\Microsoft\WindowsApps\python.exe 
+
+

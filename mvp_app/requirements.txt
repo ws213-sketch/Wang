@@ -1,0 +1,10 @@
+Flask>=2.0
+pillow
+pytesseract
+reportlab
+python-dotenv
+openai
+pytest
+requests
+# Optional: google-cloud-vision (install if you plan to use Google Vision OCR)
+# google-cloud-vision

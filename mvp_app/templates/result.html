@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <title>识别结果 - 学习卡片</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>识别结果</h1>
+    <div class="row">
+      <div class="col">
+        <h2>原始图片</h2>
+        <img src="{{ image_url }}" alt="uploaded" style="max-width:100%;height:auto;">
+      </div>
+      <div class="col">
+        <h2>OCR 文本</h2>
+        <pre>{{ ocr_text }}</pre>
+      </div>
+    </div>
+
+    <h2>精炼学习点</h2>
+    <ol>
+      {% for p in result.learn_points %}
+      <li>{{ p }}</li>
+      {% endfor %}
+    </ol>
+
+    <h2>容易混淆的知识点</h2>
+    <ul>
+      {% for c in result.confusions %}
+      <li><strong>{{ c.left }}</strong> vs <strong>{{ c.right }}</strong> — {{ c.explain }}<br>例子：{{ c.example }}</li>
+      {% endfor %}
+    </ul>
+
+    <p><a href="{{ pdf_url }}" target="_blank">下载 / 打印 PDF</a></p>
+    <p><a href="/">返回</a></p>
+  </div>
+</body>
+</html>
